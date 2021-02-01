@@ -1,3 +1,6 @@
+# https://www.acmicpc.net/problem/1475
+# 방 번호
+
 numbers = list(map(int, input().replace('9', '6')))
 max = 0
 dic = {}
