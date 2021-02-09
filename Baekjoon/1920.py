@@ -34,8 +34,8 @@ for m in arr_m:
 # M = input()
 # arr_m = list(map(int, sys.stdin.readline().split()))
 
-# for i in range(len(arr_m)):
-#     if compare[i] in arr_n:
+# for m in arr_m:
+#     if m in arr_n:
 #         print(1)
 #     else:
 #         print(0)
