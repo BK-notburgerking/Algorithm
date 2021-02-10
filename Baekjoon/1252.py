@@ -1,7 +1,8 @@
 #이진수 덧셈
 #https://www.acmicpc.net/problem/1252
+import sys
 
-binary = list(map(int, input().split(' ')))
+binary = list(map(int, sys.stdin.readline().split(' ')))
 sum = str(binary[0] + binary[1])
 
 bin = [0]
