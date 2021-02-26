@@ -18,5 +18,3 @@ for i in range(101):
                 ans[k - 1] += 1
 
 print('\n'.join(map(str, ans)))
-
-
