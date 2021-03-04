@@ -34,8 +34,8 @@ for i in range(M):
             area += 1
             dfs(i, j)
             ans.append(cnt)
-            cnt = 1
+            cnt = 1 #넓이 초기화
 
 ans.sort()
 print(area)
-print(' '.join(map(str,ans)))
+print(' '.join(map(str, ans)))
