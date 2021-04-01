@@ -49,7 +49,7 @@ for tc in range(int(sys.stdin.readline())):
                 start.append((i, j))
                 building[i][j] = 1 #초기값
 
-    if start[0][0] == 0 or start[0][0] == h-1 or start[0][1] == 0 or start[0][1] == w-1:
+    if start[0][0] == 0 or start[0][0] == h-1 or start[0][1] == 0 or start[0][1] == w-1: #끝에서 시작할 경우 코드가 작동을 안함
         print(1)
     else:
         print(bfs(start, fire))
