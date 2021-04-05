@@ -13,8 +13,6 @@ def bfs1(r, c, land):
                     visited[nr][nc] = land
                     q.append((nr, nc))
                 elif visited[nr][nc] == 0 and arr[nr][nc] == 0: #방문안했고 땅 옆에 붙어있는 바다면
-
-
                     end.append((r, c)) #땅의 끝
 
 def bfs2(end):
