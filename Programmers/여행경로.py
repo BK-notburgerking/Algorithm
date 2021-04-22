@@ -20,6 +20,8 @@ def solution(tickets):
             s.append(depart) #다시 스택에 넣어주고
             s.append(adj[depart].pop()) #가장 위에있는 티켓을 스택에 넣어줌
         else: # 해당 출발지에서 출발하는 티켓이 없는 경우
-            ans.append(depart) # 바로 정답에 넣어줌
+            # 바로 정답에 넣어줌
+            # 왜냐하면 더이상 갈곳이 없기때문에 굳이 스택에 넣어서 탐색할 필요가 없음
+            ans.append(depart)
 
     return ans[::-1]
