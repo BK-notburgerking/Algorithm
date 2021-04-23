@@ -1,20 +1,18 @@
 from heapq import heappush, heappop
 
 def prim(start, weight):
-    visit = [0] * (V + 1)
-    key = [2147483648] * (V + 1)
-    key[start] = 0
-    q = [[weight, start]]
-    ans = 0
-    while q:
+    visit = [0] * (V + 1) # 정점 방문 처리
+    q = [[weight, start]] # 힙 구조를 사용하기 위해 가중치를 앞에 둠
+    ans = 0 # 가중치 합
+    cnt = 0 # 간선의 개수
+    while cnt < V: # 간선의 개수 최대는 V-1
         k, v = heappop(q)
-        if visit[v]: continue
-        visit[v] = 1
-        ans += k
-        for u, w in G[v]:
-            if not visit[u] and key[u] > w:
-                key[u] = w
-                heappush(q, [w, u])
+        if visit[v]: continue # 이미 방문한 정점이면 지나감
+        visit[v] = 1 # 방문안했으면 방문처리
+        ans += k # 해당 정점까지의 가중치를 더해줌
+        cnt += 1 # 간선의 갯수 더해줌
+        for u, w in G[v]: # 해당 정점의 간선정보를 불러옴
+            heappush(q, [w, u]) # 힙에 넣어줌
     return ans
 
 V, E = map(int, input().split())
